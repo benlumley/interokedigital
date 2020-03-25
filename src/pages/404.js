@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
+import config from "../../config";
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
             <br />
             Not a valid URL
           </h2>
+          <h3><a className="text-primary text-center" href={`/`}>Why not vist our home page?</a></h3>
         </header>
       </section>
     </div>
