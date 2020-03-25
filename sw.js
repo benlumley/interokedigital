@@ -27,24 +27,32 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-5f5c4665417d2a22ab04.js"
+    "url": "webpack-runtime-4311dc78123fd4e6bc94.js"
   },
   {
-    "url": "commons-e5e78ccf8606631dd821.js"
+    "url": "commons-fd4f86e4068da1d70732.js"
   },
   {
-    "url": "app-000830006400b5f261ce.js"
+    "url": "app-ac65fd85c15dc5fe0930.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "3f778b382ae2d9bcfe7aca1ab8bd3314"
+    "revision": "8d7d9da337310b703d0a572235f931b1"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b042de31443a9c771a3a.js"
   },
   {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "43232b01cc861c0701a3ece4bd67720b"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "d52b38c207d74e551016d8efa8c5d81f"
+  },
+  {
     "url": "manifest.webmanifest",
-    "revision": "63bdea7368d3310854f011590b05128b"
+    "revision": "e44ae4d0d9f9dbaf1ce748e36d8eb53e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -132,12 +140,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/interokedigital`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-000830006400b5f261ce.js`))) {
+  if (!resources || !(await caches.match(`/interokedigital/app-ac65fd85c15dc5fe0930.js`))) {
     return await fetch(event.request)
   }
 
@@ -150,7 +158,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/interokedigital/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
