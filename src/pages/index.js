@@ -21,12 +21,11 @@ const IndexPage = () => (
             <span className="text-primary">Freelance Web Developer</span>
           </h2>
           <div className="subheading mb-5">
-            {config.phone} ·
-            <a href={`mailto:${config.email}`}>{config.email}</a>
+            {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
-          <p className="lead mb-5">
-            My name is Ben Lumley. I am an experienced Freelance Senior Web Developer. I specialise in all things PHP, with a particular focus on Symfony, Laravel and WordPress.
-          </p>
+          <p className="lead">
+            My name is Ben Lumley. I am an experienced Freelance Senior Web Developer. I specialise in all things PHP, with a particular focus on Symfony, Laravel and WordPress.</p>
+          <p className="lead mb-5">I am based just outside Bath, in Wiltshire, England</p>
 
           <div className="social-icons">
             {config.socialLinks.map(social => {

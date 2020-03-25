@@ -1,13 +1,13 @@
 module.exports = {
-  siteTitle: 'Interoke Digital | Ben Lumley - Freelance Web Developer', // <title>
-  manifestName: 'Resume',
-  manifestShortName: 'Landing', // max 12 characters
+  siteTitle: "Interoke Digital | Ben Lumley - Freelance Web Developer", // <title>
+  manifestName: 'Interoke Digital',
+  manifestShortName: 'Interoke Digital', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#FDB813',
   manifestThemeColor: '#FDB813',
   manifestDisplay: 'standalone',
-  manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/`, // This path is subpath of your hosting https://domain/portfolio
+  manifestIcon: 'src/assets/img/icon.png',
+  pathPrefix: ``, // This path is subpath of your hosting https://domain/portfolio
   firstName: 'Ben',
   lastName: 'Lumley',
   // social
