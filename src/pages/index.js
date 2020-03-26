@@ -25,13 +25,13 @@ const IndexPage = () => (
           </div>
           <p className="lead">
             My name is Ben Lumley. I am an experienced Freelance Senior Web Developer. I specialise in all things PHP, with a particular focus on Symfony, Laravel and WordPress.</p>
-          <p className="lead mb-5">I am based just outside Bath, in Wiltshire, England</p>
+          <p className="lead mb-5">I am based just outside Bath, in Wiltshire, England.</p>
 
           <div className="social-icons">
             {config.socialLinks.map(social => {
               const { icon, url } = social;
               return (
-                <a key={url} href={url}>
+                <a key={url} href={url} target={`_blank`}>
                   <i className={`fab ${icon}`}></i>
                 </a>
               );
@@ -181,7 +181,7 @@ const IndexPage = () => (
                   <div className="subheading mb-3">Freelance Web Developer</div>
                 </div>
 
-                <div className="resume-date text-md-right">
+                <div className="resume-date font-weight-bold text-md-right">
                   <span className="text-primary">2013 - Present</span>
                 </div>
               </div>
@@ -223,7 +223,7 @@ const IndexPage = () => (
                   <div className="subheading mb-3">Freelance Developer</div>
                 </div>
 
-                <div className="resume-date text-md-right">
+                <div className="resume-date font-weight-bold text-md-right">
                   <span className="text-primary">2016 - Present</span>
                 </div>
               </div>
@@ -252,7 +252,7 @@ const IndexPage = () => (
                   <div className="subheading mb-3">Contract Web Developer</div>
                 </div>
 
-                <div className="resume-date text-md-right">
+                <div className="resume-date font-weight-bold text-md-right">
                   <span className="text-primary">2012 - Present</span>
                 </div>
               </div>
@@ -323,7 +323,7 @@ const IndexPage = () => (
               <div className="lead">Biological Sciences</div>
 
             </div>
-            <div className="resume-date text-md-right">
+            <div className="resume-date font-weight-bold text-md-right">
               <span className="text-primary">2005</span>
             </div>
           </div>
