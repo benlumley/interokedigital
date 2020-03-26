@@ -66,57 +66,7 @@ const IndexPage = () => (
           <div className="subheading mb-3">
             Programming Languages &amp; Development Tools
           </div>
-          <ul className="list-inline dev-icons mb-4">
-            <li className="list-inline-item">
-              <i className="fab fa-laravel" title={`Laravel`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-symfony" title={`Symfony`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-wordpress" title={`Wordpress`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-php" title={`Php`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-js-square" title={`Javascript`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-html5" title={`Html5`}></i>
-            </li>
 
-            <li className="list-inline-item">
-              <i className="fab fa-angular" title={`Angular`}></i>
-            </li>
-
-            <li className="list-inline-item">
-              <i className="fab fa-react" title={`React`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-node-js" title={`nodejs`}></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-sass" title={`Sass`}></i>
-            </li>
-
-            <li className="list-inline-item">
-              <i className="fab fa-gulp" title={`Gulp`}></i>
-            </li>
-
-            <li className="list-inline-item">
-              <i className="fab fa-npm" title={`NPM`}></i>
-            </li>
-
-            <li className="list-inline-item">
-              <i className="fab fa-aws" title={`AWS`}></i>
-            </li>
-
-            <li className="list-inline-item">
-              <i className="fab fa-linux" title={`Linux`}></i>
-            </li>
-
-          </ul>
           <div className="row p-2">
             <ul className="fa-ul mb-0 col-md">
               <li>
@@ -167,6 +117,57 @@ const IndexPage = () => (
               </li>
             </ul>
           </div>
+          <ul className="list-inline dev-icons mt-4">
+            <li className="list-inline-item">
+              <i className="fab fa-laravel" title={`Laravel`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-symfony" title={`Symfony`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-wordpress" title={`Wordpress`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-php" title={`Php`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-js-square" title={`Javascript`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-html5" title={`Html5`}></i>
+            </li>
+
+            <li className="list-inline-item">
+              <i className="fab fa-angular" title={`Angular`}></i>
+            </li>
+
+            <li className="list-inline-item">
+              <i className="fab fa-react" title={`React`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-node-js" title={`nodejs`}></i>
+            </li>
+            <li className="list-inline-item">
+              <i className="fab fa-sass" title={`Sass`}></i>
+            </li>
+
+            <li className="list-inline-item">
+              <i className="fab fa-gulp" title={`Gulp`}></i>
+            </li>
+
+            <li className="list-inline-item">
+              <i className="fab fa-npm" title={`NPM`}></i>
+            </li>
+
+            <li className="list-inline-item">
+              <i className="fab fa-aws" title={`AWS`}></i>
+            </li>
+
+            <li className="list-inline-item">
+              <i className="fab fa-linux" title={`Linux`}></i>
+            </li>
+
+          </ul>
         </div>
       </section>
 
