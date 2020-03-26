@@ -176,9 +176,10 @@ const IndexPage = () => (
 
               <div className="d-flex  justify-content-between ">
 
-                <div className="resume-heading">
+                <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Adventurists</h3>
-                  <div className="subheading mb-3">Freelance Web Developer</div>
+                  <div className="subheading ">Freelance Web Developer</div>
+                  <p className="lead"><a target={`_blank`} href={`https://www.theadventurists.com/`}>https://www.theadventurists.com/</a></p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
@@ -218,13 +219,15 @@ const IndexPage = () => (
             <div className="resume-content">
               <div className="d-flex  justify-content-between ">
 
-                <div className="resume-heading">
+                <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Headteacher's Report</h3>
-                  <div className="subheading mb-3">Freelance Developer</div>
+                  <div className="subheading ">Freelance Developer</div>
+                  <p className="lead"><a target={`_blank`} href={`https://www.theheadteachersreport.com/`}>https://www.theheadteachersreport.com/</a></p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
                   <span className="text-primary">2016 - Present</span>
+
                 </div>
               </div>
               <p>
@@ -247,9 +250,10 @@ const IndexPage = () => (
             <div className="resume-content">
               <div className="d-flex  justify-content-between ">
 
-                <div className="resume-heading">
+                <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Visa Machine</h3>
-                  <div className="subheading mb-3">Contract Web Developer</div>
+                  <div className="subheading ">Contract Web Developer</div>
+                  <p className="lead"><a target={`_blank`} href={`https://www.thevisamachine.com/`}>https://www.thevisamachine.com/</a></p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
