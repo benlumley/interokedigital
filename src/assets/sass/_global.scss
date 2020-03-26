@@ -4,6 +4,13 @@ body {
   @include body-font;
   padding-top: 54px;
   color: $gray-600;
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: 80vw;
+  background-position-y: calc(100vh - 20vw);
+  background-size: 20vw 20vw;
+
 }
 @media (min-width: 992px) {
   body {

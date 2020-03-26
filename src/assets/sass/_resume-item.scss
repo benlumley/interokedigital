@@ -8,6 +8,13 @@ section.resume-section {
       min-width: none;
     }
   }
+
+  .img-profile {
+    border-color: $interoke_orange;
+    border-width: 5px;
+    border-style: solid;
+    max-width: 30vw;
+  }
 }
 @media (min-width: 768px) {
   section.resume-section {

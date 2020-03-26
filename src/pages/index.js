@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
+import avatar from "../assets/images/avatar.jpg";
 const IndexPage = () => (
   <Layout>
     <Sidebar />
@@ -14,6 +15,15 @@ const IndexPage = () => (
         id="about"
       >
         <div className="w-100">
+
+          <span className="d-block d-lg-none mb-2">
+            <img
+                className="img-fluid img-profile rounded-circle mx-auto mb-2"
+                src={avatar}
+                alt="Ben Lumley"
+            />
+          </span>
+
           <h1 className="mb-0">
             Interoke Digital
           </h1>
@@ -24,7 +34,7 @@ const IndexPage = () => (
             {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead">
-            My name is Ben Lumley. I am an experienced Freelance Senior Web Developer. I specialise in all things PHP, with a particular focus on Symfony, Laravel and WordPress.</p>
+            My name is Ben Lumley. I am a Freelance Senior Web Developer with over 15 years experience. I specialise in all things PHP, with a particular focus on Symfony, Laravel, and WordPress.</p>
           <p className="lead mb-5">I am based just outside Bath, in Wiltshire, England.</p>
 
           <div className="social-icons">

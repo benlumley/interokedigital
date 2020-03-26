@@ -1,4 +1,5 @@
 #sideNav {
+  background: $gray-800;
   .navbar-nav .nav-item .nav-link {
     font-weight: 800;
     letter-spacing: 0.05rem;
@@ -9,29 +10,45 @@
       outline-color: lighten($primary, 15%);
     }
   }
+
+  .id-logo {
+    width: 140px;
+  }
 }
 
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;
+
     position: fixed;
     top: 0;
     left: 0;
+
 
     display: flex;
     flex-direction: column;
 
     width: $sidebar-base-width;
     height: 100vh;
+
     .navbar-brand {
-      display: flex;
+      //display: flex;
 
       margin: auto auto 0;
       padding: 0.5rem;
       .img-profile {
         max-width: 10rem;
         max-height: 10rem;
-        border: 0.5rem solid fade-out($white, 0.8);
+        border: 0.3rem solid $interoke_orange
+      }
+
+      .id-logo {
+        @media (min-height: 600px) {
+          position: fixed;
+          bottom: 1rem;
+          left: 1rem;
+          width: 15rem;
+        }
       }
     }
     .navbar-collapse {
