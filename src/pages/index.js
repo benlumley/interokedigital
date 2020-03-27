@@ -190,7 +190,7 @@ const IndexPage = () => (
                 <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Adventurists</h3>
                   <div className="subheading ">Freelance Web Developer</div>
-                  <p className="lead"><a target={`_blank`} href={`https://www.theadventurists.com/`}>https://www.theadventurists.com/</a></p>
+                  <p className="lead"><a target={`_blank`} href={`https://www.theadventurists.com/`}>Visit</a></p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
@@ -233,7 +233,7 @@ const IndexPage = () => (
                 <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Headteacher's Report</h3>
                   <div className="subheading ">Freelance Developer</div>
-                  <p className="lead"><a target={`_blank`} href={`https://www.theheadteachersreport.com/`}>https://www.theheadteachersreport.com/</a></p>
+                  <p className="lead"><a target={`_blank`} href={`https://www.theheadteachersreport.com/`}>Visit</a></p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
@@ -264,7 +264,7 @@ const IndexPage = () => (
                 <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Visa Machine</h3>
                   <div className="subheading ">Contract Web Developer</div>
-                  <p className="lead"><a target={`_blank`} href={`https://www.thevisamachine.com/`}>https://www.thevisamachine.com/</a></p>
+                  <p className="lead"><a target={`_blank`} href={`https://www.thevisamachine.com/`}>Visit</a></p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
