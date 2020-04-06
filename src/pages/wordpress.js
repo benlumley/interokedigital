@@ -1,14 +1,20 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 import Layout from '../components/Layout';
 
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
-import avatar from "../assets/images/avatar.jpg";
-const IndexPage = () => (
+
+let siteTitle = "WordPress Development - " + config.siteTitle;
+
+const WordPressPage = () => (
   <Layout>
     <Sidebar />
+    <Helmet>
+      <title>Freelance WordPress Developer - Interoke Digital | Ben Lumley</title>
+    </Helmet>
     <div className="container-fluid p-0">
       <section
         className="resume-section p-3 p-lg-5 d-flex align-items-center"
@@ -17,14 +23,14 @@ const IndexPage = () => (
         <div className="w-100">
 
           <h1 className="mb-0">
-            WordPress Development
+            Word&shy;Press Devel&shy;opment
           </h1>
 
           <div className="subheading mb-5">
             <span className="text-primary">Interoke Digital</span> · {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead mb-5">
-            I have worked with WordPress for over 10 years, covering all aspects of WordPress development - plugin development and customisation, theme development, performance, security, and high performance hosting setups.
+            I have worked with WordPress for over 10 years, covering all aspects of WordPress development - plugin development and customisation, theme development, performance, security, and high performance hosting setups as well as WordPress hack and disaster recovery.
           </p>
         </div>
       </section>
@@ -147,6 +153,8 @@ const IndexPage = () => (
 
           <p>If your WordPress site has been hacked or appears to have adverts or links in that you didn't put there, I can help you to identify and correct the problem and also to prevent the site getting hacked again in the future.</p>
 
+          <p>I can help you to review whether your site is prepared for quick and easy disaster recovery - a little bit of preparation can make a recovery much more simple. For example - good daily backups with a long retention usually mean you can quickly and easily jump back to right before the hack. And having all of your passwords (for the site, domain hosting and any third party services) to hand can take a lot of the stress away.</p>
+
         </div>
       </section>
 
@@ -155,4 +163,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default WordPressPage;

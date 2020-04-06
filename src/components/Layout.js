@@ -31,6 +31,7 @@ class Layout extends Component {
               <html lang="en" />
             </Helmet>
             <div className={'main-body'}>{children}</div>
+            <div className="corner-ribbon top-right sticky orange">Immediate<br/> Availability</div>
           </>
         )}
       />
