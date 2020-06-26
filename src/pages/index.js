@@ -34,7 +34,7 @@ const IndexPage = () => (
             {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead">
-            My name is Ben Lumley. I am a Freelance Senior Web Developer with over 15 years experience. I specialise in all things PHP, with a particular focus on Symfony, Laravel, and WordPress.</p>
+                        I am a Freelance Senior Web Developer with over 15 years experience. I specialise in all things PHP, with a particular focus on Symfony, Laravel, and <a href="/wordpress" title="WordPress Developer">WordPress</a>.</p>
           <p className="lead mb-5">I am based just outside Bath, in Wiltshire, England.</p>
 
           <div className="social-icons">
