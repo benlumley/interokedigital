@@ -213,7 +213,7 @@ const IndexPage = () => (
                     instances supported by containerised services to provide near-instant ‘burstable’ capacity. I am also responsible for the web portal used day to day by customers - features include access to the reports,
                     subscription management, and configuration of certain aspects of the reports.</p>
 
-                <p>mySchoolWellbeing at it's heart is a surveying tool that allows school to periodically collect a dataset from each group (staff, parents, pupils) of stakeholders.
+                <p>mySchoolWellbeing at it's heart is a surveying tool that allows schools to periodically collect a dataset from each group (staff, parents, pupils) of stakeholders.
                     This data is then used to monitor and track wellbeing within the school through a data portal comprising customised reports and charting. As with the Headteacher’s report, there is again a heavy dependency on data being drawn in from dfe datasets and schools' own systems.</p>
 
             </div>
