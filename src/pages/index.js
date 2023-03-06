@@ -182,6 +182,43 @@ const IndexPage = () => (
 
           <h2 className="mb-5">Key Projects</h2>
 
+
+        <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div className="resume-content">
+                <div className="d-flex  justify-content-between ">
+
+                    <div className="resume-heading mb-3">
+                        <h3 className="mb-0">The Headteacher's Report & mySchoolWellbeing</h3>
+                        <div className="subheading ">Freelance Developer</div>
+                        <p className="lead"><a target={`_blank`} href={`https://www.theheadteachersreport.com/`}>Visit</a></p>
+                    </div>
+
+                    <div className="resume-date font-weight-bold text-md-right">
+                        <span className="text-primary">2016 - Present</span>
+
+                    </div>
+                </div>
+                <p>
+                    Two projects for the same startup:
+                    <ul>
+                        <li>The Headteacher’s report provides reporting services to headteachers and the wider school management to help them meet their obligations to their governors, education authorities, and parents.</li>
+                        <li>mySchoolWellbeing provides digital services to help schools discover, track and drive improvement to the wellbeing of staff, parents, and pupils.</li>
+                    </ul>
+                </p>
+
+                <p>The Headteacher’s report is a system that automates the production of reports based on data drawn from publicly
+                    available datasets issued by the Department for Education alongside data from schools’ own MIS systems.
+                    This is a computationally intensive task - so a key challenge is to manage costs whilst still providing
+                    fast turnaround. This is achieved with workload prioritisation and infrastructure scaling using EC2
+                    instances supported by containerised services to provide near-instant ‘burstable’ capacity. I am also responsible for the web portal used day to day by customers - features include access to the reports,
+                    subscription management, and configuration of certain aspects of the reports.</p>
+
+                <p>mySchoolWellbeing at it's heart is a surveying tool that allows school to periodically collect a dataset from each group (staff, parents, pupils) of stakeholders.
+                    This data is then used to monitor and track wellbeing within the school through a data portal comprising customised reports and charting. As with the Headteacher’s report, there is again a heavy dependency on data being drawn in from dfe datasets and schools' own systems.</p>
+
+            </div>
+        </div>
+
           <div className="resume-item justify-content-between mb-5">
             <div className="resume-content">
 
@@ -226,36 +263,38 @@ const IndexPage = () => (
 
           </div>
 
-          <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div className="resume-content">
-              <div className="d-flex  justify-content-between ">
 
-                <div className="resume-heading mb-3">
-                  <h3 className="mb-0">The Headteacher's Report</h3>
-                  <div className="subheading ">Freelance Developer</div>
-                  <p className="lead"><a target={`_blank`} href={`https://www.theheadteachersreport.com/`}>Visit</a></p>
-                </div>
+                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div className="resume-content">
+                            <div className="d-flex  justify-content-between ">
 
-                <div className="resume-date font-weight-bold text-md-right">
-                  <span className="text-primary">2016 - Present</span>
+                                <div className="resume-heading mb-3">
+                                    <h3 className="mb-0">Applied Change - Change Journey Navigator</h3>
+                                    <div className="subheading ">Freelance Developer</div>
+                                    <p className="lead"><a target={`_blank`} href={`https://app.appliedchange.co.uk/`}>Visit</a></p>
+                                </div>
 
-                </div>
-              </div>
-              <p>
-                A startup, The Headteacher’s report provides reporting services to headteachers and the wider school management to help them meet their obligations to their governors, education authorities, and parents.
-              </p>
+                                <div className="resume-date font-weight-bold text-md-right">
+                                    <span className="text-primary">2020 - Present</span>
 
-              <p>At its core is a system that automates the production of reports based on data drawn from publicly
-                available datasets issued by the Department for Education alongside data from schools’ own MIS systems.
-                This is a computationally intensive task - so a key challenge is to manage costs whilst still providing
-                fast turnaround. This is achieved with workload prioritisation and infrastructure scaling using EC2
-                instances supported by containerised services to provide near-instant ‘burstable’ capacity.</p>
+                                </div>
+                            </div>
 
-              <p>I am also responsible for the web portal used day to day by customers - features include access to the reports,
-              subscription management, and configuration of certain aspects of the reports.</p>
+                            <p>Applied Change are a data led change management consultancy, the Change Journey Navigator is an online software product to help deliver this service.</p>
 
-            </div>
-          </div>
+                            <p>In essence, the project is a startup, I am responsible for the entirety of the system - the system design and development, as well as the server infrastructure and it's day to day operation.
+                                The system centres around a tool for asking stakeholders a curated set of questions. Behind the scenes these are all carefully grouped and categorised which allows
+                                analysis of the results against the Applied Change Model. The results of the survey are delivered through a reporting 'dashboard' that allows Applied Change to analyse the results in real time,
+                                including the ability to dig into and compare data across different aspects of the 'model' as well as between locations, business groups and time periods. This in turn helps businesses to
+                                understand what is and is not working and why, ultimately enabling them to drive change. The cycle can then be repeated to track progress and measure the impact of the change.
+                            </p>
+
+                            <p>The product is multi tenant - Applied Change use it, but they also provide the software to other change practioners to use with their clients; consequently it is multi-tenanted
+                                with all that goes with that - for example user management, account levels, billing, and security.
+                            </p>
+
+                        </div>
+                    </div>
 
           <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div className="resume-content">
@@ -264,11 +303,11 @@ const IndexPage = () => (
                 <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Visa Machine</h3>
                   <div className="subheading ">Contract Web Developer</div>
-                  <p className="lead"><a target={`_blank`} href={`https://www.thevisamachine.com/`}>Visit</a></p>
+                  <p className="lead"><s>Visit</s> (link no longer live)</p>
                 </div>
 
                 <div className="resume-date font-weight-bold text-md-right">
-                  <span className="text-primary">2012 - Present</span>
+                  <span className="text-primary">2012 - 2020</span>
                 </div>
               </div>
 
@@ -317,6 +356,30 @@ const IndexPage = () => (
 
             </div>
           </div>
+
+
+
+        <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div className="resume-content">
+              <div className="d-flex  justify-content-between ">
+
+                <div className="resume-heading">
+                  <h3 className="mb-0">Data Sync / Process Automation</h3>
+                  <div className="subheading mb-3">Freelance Developer</div>
+                </div>
+
+              </div>
+
+              <p>I take on smaller/ad-hoc development tasks to address specific problems businesses have - loosely within the realm of process automation.</p>
+
+              <p>Examples include syncing orders between websites and accounting software; customised reporting; syncing stock levels between warehousing and ecommerce; integration with Amazon Vendor Central.</p>
+
+            </div>
+          </div>
+
+
+
+
 
 
         </div>
