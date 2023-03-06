@@ -87,7 +87,7 @@ const IndexPage = () => (
               </li>
               <li>
                 <i className="fa-li fa fa-clock"></i>
-                Experienced with many of the older PHP frameworks - Cake, Symfony1, Zend1 etc
+                Experienced with many of the older PHP frameworks + extending their life - Cake, Symfony1, Zend1 etc.
               </li>
             </ul>
             <ul className="fa-ul mb-0 col-md">
@@ -97,7 +97,7 @@ const IndexPage = () => (
               </li>
               <li>
                 <i className="fa-li fab fa-html5"></i>
-                HTML
+                HTML / CSS
               </li>
               <li>
                 <i className="fa-li fab fa-react"></i>
