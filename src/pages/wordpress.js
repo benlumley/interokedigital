@@ -10,11 +10,11 @@ import config from '../../config';
 let siteTitle = "WordPress Development - " + config.siteTitle;
 
 const WordPressPage = () => (
-  <Layout>
+  <Layout
+    title="WordPress Developer - Bath, Bristol, Wiltshire | Interoke Digital"
+    description="WordPress development services for startups and businesses in Bath, Bristol, and Wiltshire. Plugin development, theme customization, performance optimization, security, and hosting."
+  >
     <Sidebar />
-    <Helmet>
-      <title>Freelance WordPress Developer - Interoke Digital | Ben Lumley</title>
-    </Helmet>
     <div className="container-fluid p-0">
       <section
         className="resume-section p-3 p-lg-5 d-flex align-items-center"

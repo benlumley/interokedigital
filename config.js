@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "Interoke Digital | Ben Lumley - Freelance Web Developer", // <title>
+  siteTitle: "Interoke Digital | Full-Stack Developer | Bath, Bristol, Wiltshire", // <title>
   manifestName: 'Interoke Digital',
   manifestShortName: 'Interoke Digital', // max 12 characters
   manifestStartUrl: '/',
@@ -10,6 +10,13 @@ module.exports = {
   pathPrefix: ``, // This path is subpath of your hosting https://domain/portfolio
   firstName: 'Ben',
   lastName: 'Lumley',
+  // Local business info
+  location: {
+    city: 'Bath',
+    region: 'Wiltshire',
+    country: 'England',
+    areas: ['Bath', 'Bristol', 'Wiltshire', 'UK'],
+  },
   // social
   socialLinks: [
     {
@@ -23,16 +30,13 @@ module.exports = {
       url: 'https://linkedin.com/in/benlumley/',
     },
     {
-      icon: 'fa-twitter',
-      name: 'Twitter',
-      url: 'https://twitter.com/benlumley',
-    },
-    {
       icon: 'fa-stack-overflow',
       name: 'StackOverflow',
       url: 'https://stackoverflow.com/users/39161/benlumley',
     },
   ],
   email: 'hello@interokedigital.co.uk',
-  phone: '07732 806321'
+  phone: '07732 806321',
+  // Google Analytics - add your tracking ID here
+  googleAnalyticsId: process.env.GATSBY_GA_ID || '',
 };

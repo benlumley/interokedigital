@@ -24,6 +24,7 @@
     "react-images": "^1.1.0",
     "react-router-dom": "^5.1.2",
     "react-scrollspy": "^3.4.2",
+    "sharp": "^0.34.5",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {

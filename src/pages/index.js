@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/Layout';
 
@@ -6,6 +6,85 @@ import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
 import avatar from "../assets/images/avatar.jpg";
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const subject = encodeURIComponent('New enquiry from Interoke Digital website');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:${config.email}?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  if (submitted) {
+    return (
+      <div className="alert alert-success">
+        <i className="fa fa-check-circle mr-2"></i>
+        <strong>Thank you!</strong> Your email client should open. If it doesn't, please email us directly at <a href={`mailto:${config.email}`}>{config.email}</a>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} id="contact-form">
+      <div className="form-group">
+        <label htmlFor="name">Name</label>
+        <input 
+          type="text" 
+          className="form-control" 
+          id="name" 
+          name="name" 
+          value={formData.name}
+          onChange={handleChange}
+          required 
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <input 
+          type="email" 
+          className="form-control" 
+          id="email" 
+          name="email" 
+          value={formData.email}
+          onChange={handleChange}
+          required 
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="message">Tell me about your project</label>
+        <textarea 
+          className="form-control" 
+          id="message" 
+          name="message" 
+          rows="4" 
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
+      </div>
+      <button type="submit" className="btn btn-primary">
+        <i className="fa fa-paper-plane mr-2"></i>Send Message
+      </button>
+      <p className="small text-muted mt-2">
+        <i className="fa fa-envelope mr-1"></i>
+        This will open your email client to send the message.
+      </p>
+    </form>
+  );
+};
+
 const IndexPage = () => (
   <Layout>
     <Sidebar />
@@ -28,14 +107,29 @@ const IndexPage = () => (
             Interoke Digital
           </h1>
           <h2>
-            <span className="text-primary">Freelance Web Developer</span>
+            <span className="text-primary">Full-Stack Developer</span>
           </h2>
           <div className="subheading mb-5">
             {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead">
-                        I am a Freelance Senior Web Developer with over 15 years experience. I specialise in all things PHP, with a particular focus on Symfony, Laravel, and <a href="/wordpress" title="WordPress Developer">WordPress</a>.</p>
-          <p className="lead mb-5">I am based just outside Bath, in Wiltshire, England.</p>
+            With over 20 years of experience, I handle everything technical - from servers and infrastructure to backend development, frontend implementation, and scaling as your business grows. This makes me a great fit for <a href="#myschoolwellbeing">software startups</a>, <a href="#applied-change">SaaS startups</a>, small businesses in need of CRM systems, or <a href="#data-sync">integration work between systems</a>.
+          </p>
+          <p className="lead">
+            I'm particularly experienced with the <strong>Laravel</strong> framework and <strong>React</strong>, and these are what I prefer to work with where they fit. 
+          </p>
+          <p className="lead mb-5">
+            I'm based just outside <strong>Bath, Wiltshire</strong> - working with both local clients across <strong>Bath, Bristol and Wiltshire</strong> as well as clients throughout the UK.
+          </p>
+          
+          <div className="mb-4">
+            <a href="#contact" className="btn btn-primary btn-lg mr-3">
+              <i className="fa fa-envelope mr-2"></i>Get in Touch
+            </a>
+            <a href="#experience" className="btn btn-outline-primary btn-lg">
+              <i className="fa fa-briefcase mr-2"></i>View Projects
+            </a>
+          </div>
 
           <div className="social-icons">
             {config.socialLinks.map(social => {
@@ -64,56 +158,61 @@ const IndexPage = () => (
           <h2 className="mb-5">Skills</h2>
 
           <div className="subheading mb-3">
-            Programming Languages &amp; Development Tools
+            Full-Stack Capabilities
           </div>
+          <p className="mb-4">
+            I handle the complete technical stack - from infrastructure and servers to backend APIs, 
+            frontend development, and scaling solutions. My strongest suit is backend development, where I build 
+            robust, scalable systems that grow with your business.
+          </p>
 
           <div className="row p-2">
             <ul className="fa-ul mb-0 col-md">
               <li>
-                <i className="fa-li fab fa-symfony"></i>
-                Symfony
-              </li>
-              <li>
                 <i className="fa-li fab fa-laravel"></i>
-                Laravel
-              </li>
-              <li>
-                <i className="fa-li fab fa-wordpress"></i>
-                WordPress
+                <strong>Laravel</strong> - My primary framework for new projects
               </li>
               <li>
                 <i className="fa-li fab fa-php"></i>
-                + generally anything PHP
+                PHP & Backend Development
               </li>
               <li>
-                <i className="fa-li fa fa-clock"></i>
-                Experienced with many of the older PHP frameworks + extending their life - Cake, Symfony1, Zend1 etc.
+                <i className="fa-li fab fa-wordpress"></i>
+                WordPress (when it's the right tool)
+              </li>
+              <li>
+                <i className="fa-li fa fa-server"></i>
+                API Development & Integration
+              </li>
+              <li>
+                <i className="fa-li fa fa-database"></i>
+                Database Design & Optimization
               </li>
             </ul>
             <ul className="fa-ul mb-0 col-md">
               <li>
                 <i className="fa-li fab fa-js-square"></i>
-                Javascript - React/Vue/jQuery + Others
+                Frontend - React
               </li>
               <li>
                 <i className="fa-li fab fa-html5"></i>
-                HTML / CSS
-              </li>
-              <li>
-                <i className="fa-li fab fa-react"></i>
-                JAM Stack - Hugo, Gatsby, Netlify etc
+                HTML / CSS / Responsive Design
               </li>
               <li>
                 <i className="fa-li fab fa-linux"></i>
-                Sysadmin/Devops
+                DevOps & Server Management
               </li>
               <li>
                 <i className="fa-li fab fa-aws"></i>
-                Amazon Web Services
+                AWS & Cloud Infrastructure
               </li>
               <li>
                 <i className="fa-li fab fa-docker"></i>
-                Docker / Containerisation
+                Docker & Containerisation
+              </li>
+              <li>
+                <i className="fa-li fa fa-chart-line"></i>
+                Scaling & Performance Optimization
               </li>
             </ul>
           </div>
@@ -183,7 +282,7 @@ const IndexPage = () => (
           <h2 className="mb-5">Key Projects</h2>
 
 
-        <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5" id="myschoolwellbeing">
             <div className="resume-content">
                 <div className="d-flex  justify-content-between ">
 
@@ -226,7 +325,7 @@ const IndexPage = () => (
 
                 <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Adventurists</h3>
-                  <div className="subheading ">Freelance Web Developer</div>
+                  <div className="subheading ">Freelance Developer</div>
                   <p className="lead"><a target={`_blank`} href={`https://www.theadventurists.com/`}>Visit</a></p>
                 </div>
 
@@ -264,7 +363,7 @@ const IndexPage = () => (
           </div>
 
 
-                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5" id="applied-change">
                         <div className="resume-content">
                             <div className="d-flex  justify-content-between ">
 
@@ -302,7 +401,7 @@ const IndexPage = () => (
 
                 <div className="resume-heading mb-3">
                   <h3 className="mb-0">The Visa Machine</h3>
-                  <div className="subheading ">Contract Web Developer</div>
+                  <div className="subheading ">Contract Developer</div>
                   <p className="lead"><s>Visit</s> (link no longer live)</p>
                 </div>
 
@@ -359,7 +458,7 @@ const IndexPage = () => (
 
 
 
-        <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5" id="data-sync">
             <div className="resume-content">
               <div className="d-flex  justify-content-between ">
 
@@ -406,6 +505,47 @@ const IndexPage = () => (
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <hr className="m-0" />
+
+      <section
+          className="resume-section p-3 p-lg-5 d-flex align-items-center"
+          id="contact"
+      >
+        <div className="w-100">
+          <h2 className="mb-5">Get in Touch</h2>
+          <p className="lead mb-4">
+            Have a project in mind? I work with clients across <strong>Bath, Bristol, and Wiltshire</strong>, and throughout the UK. 
+            Whether you need a full software product built, help scaling an existing system, or technical expertise for a specific challenge, let's talk.
+          </p>
+          
+          <div className="row">
+            <div className="col-md-6 mb-4">
+              <h4 className="mb-3">Contact Details</h4>
+              <p>
+                <i className="fa fa-phone mr-2"></i>
+                <a href={`tel:${config.phone.replace(/\s/g, '')}`}>{config.phone}</a>
+              </p>
+              <p>
+                <i className="fa fa-envelope mr-2"></i>
+                <a href={`mailto:${config.email}`}>{config.email}</a>
+              </p>
+              <p className="mt-4">
+                <i className="fa fa-map-marker-alt mr-2"></i>
+                Based in Wiltshire, near Bath<br />
+                <small className="text-muted">Serving Bath, Bristol, Wiltshire & UK-wide</small>
+              </p>
+              <p className="mt-3 small text-muted">
+                Ben Lumley, Interoke Digital
+              </p>
+            </div>
+            <div className="col-md-6">
+              <h4 className="mb-3">Send a Message</h4>
+              <ContactForm />
+            </div>
+          </div>
         </div>
       </section>
 

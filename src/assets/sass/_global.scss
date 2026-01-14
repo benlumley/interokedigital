@@ -85,3 +85,61 @@ p.lead {
     }
   }
 }
+
+// Blog styling
+.blog-content {
+  line-height: 1.8;
+  
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+  
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  pre {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  code {
+    font-family: 'Courier New', monospace;
+  }
+  
+  p {
+    margin-bottom: 1.25rem;
+  }
+  
+  a {
+    color: $primary;
+    text-decoration: underline;
+    
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+}
+
+.blog-posts {
+  article {
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+}
