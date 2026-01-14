@@ -113,7 +113,7 @@ const IndexPage = () => (
             {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead">
-            With over 20 years of experience, I handle everything technical - from servers and infrastructure to backend development, frontend implementation, and scaling as your business grows. This makes me a great fit for <a href="#myschoolwellbeing">software startups</a>, <a href="#applied-change">SaaS startups</a>, small businesses in need of CRM systems, or <a href="#data-sync">integration work between systems</a>.
+            With over 20 years of experience, I handle everything technical - from servers and infrastructure to backend development, frontend implementation, and scaling as your business grows. I'm effective at communicating and discussing software with non-technical people, and experienced at helping to shape and decide the direction of software projects. This makes me a great fit for <a href="#myschoolwellbeing">software startups</a>, <a href="#applied-change">SaaS startups</a>, small businesses in need of CRM systems, or <a href="#data-sync">integration work between systems</a>.
           </p>
           <p className="lead">
             I'm particularly experienced with the <strong>Laravel</strong> framework and <strong>React</strong>, and these are what I prefer to work with where they fit. 
