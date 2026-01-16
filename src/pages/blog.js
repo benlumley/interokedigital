@@ -57,6 +57,7 @@ const BlogPage = () => (
   <Layout
     title="Blog & Resources - Interoke Digital"
     description="Articles, guides, and resources about Laravel development, startup software development, and building scalable web applications."
+    canonical="https://www.interokedigital.co.uk/blog"
   >
     <Sidebar />
     <div className="container-fluid p-0">

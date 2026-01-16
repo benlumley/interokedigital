@@ -85,9 +85,108 @@ const ContactForm = () => {
   );
 };
 
-const IndexPage = () => (
-  <Layout>
-    <Sidebar />
+const IndexPage = () => {
+  const siteUrl = 'https://www.interokedigital.co.uk';
+  const location = config.location || {};
+
+  // Service schema for SEO
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Interoke Digital',
+    description: 'Full-stack development services specializing in Laravel, React, and startup software development. Serving Bath, Bristol, Wiltshire, and UK-wide.',
+    url: siteUrl,
+    provider: {
+      '@type': 'Person',
+      name: `${config.firstName} ${config.lastName}`,
+      jobTitle: 'Full-Stack Developer',
+      email: config.email,
+      telephone: config.phone,
+    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Bath',
+      },
+      {
+        '@type': 'City',
+        name: 'Bristol',
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Wiltshire',
+      },
+      {
+        '@type': 'Country',
+        name: 'United Kingdom',
+      },
+    ],
+    serviceType: [
+      'Laravel Development',
+      'Full-Stack Development',
+      'Backend Development',
+      'API Development',
+      'Startup Software Development',
+      'System Integration',
+      'DevOps Consulting',
+    ],
+    priceRange: '$$',
+  };
+
+  // FAQ schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Are you a Laravel developer in Bath?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I\'m a full-stack developer based just outside Bath, Wiltshire, specializing in Laravel development. I work with clients across Bath, Bristol, and Wiltshire, as well as throughout the UK.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What services do you offer as a full-stack developer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I provide complete full-stack development services including backend development with Laravel, frontend development with React, API development, system integration, DevOps, and infrastructure management. I specialize in building software products for startups and scaling existing applications.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you work with startups?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I specialize in working with startups and SaaS companies. I have extensive experience building MVPs, scaling applications, and helping shape the technical direction of early-stage companies. My experience includes working with software startups, SaaS startups, and businesses needing CRM systems.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What technologies do you use?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I primarily work with Laravel (PHP) for backend development and React for frontend development. I also have experience with WordPress, AWS, Docker, Linux server management, and various database systems. I\'m a strong advocate of choosing the right technology for each project rather than defaulting to what I know best - I\'ll recommend and work with whatever stack makes the most sense for your specific needs and constraints.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long have you been developing software?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I have over 20 years of experience in software development. I\'ve worked on projects ranging from small business websites to large-scale applications handling millions of users, including ecommerce platforms, SaaS products, and mission-critical tracking systems.',
+        },
+      },
+    ],
+  };
+
+  return (
+    <Layout
+      additionalStructuredData={[serviceSchema, faqSchema]}
+      canonical={siteUrl}
+    >
+      <Sidebar />
     <div className="container-fluid p-0">
       <section
         className="resume-section p-3 p-lg-5 d-flex align-items-center"
@@ -104,10 +203,10 @@ const IndexPage = () => (
           </span>
 
           <h1 className="mb-0">
-            Interoke Digital
+            Full-Stack Developer in Bath & Bristol | Laravel Expert
           </h1>
           <h2>
-            <span className="text-primary">Full-Stack Developer</span>
+            <span className="text-primary">Interoke Digital</span>
           </h2>
           <div className="subheading mb-5">
             {config.phone} · <a href={`mailto:${config.email}`}>{config.email}</a>
@@ -140,6 +239,75 @@ const IndexPage = () => (
                 </a>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <hr className="m-0" />
+
+      <section
+        className="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="faq"
+      >
+        <div className="w-100">
+          <h2 className="mb-5">Frequently Asked Questions</h2>
+          
+          <div className="faq-list">
+            <div className="faq-item mb-4">
+              <h3 className="h4 mb-2">
+                <i className="fa fa-question-circle text-primary mr-2"></i>
+                Are you a Laravel developer in Bath?
+              </h3>
+              <p className="lead">
+                Yes, I'm a full-stack developer based just outside Bath, Wiltshire, specializing in Laravel development. I work with clients across Bath, Bristol, and Wiltshire, as well as throughout the UK.
+              </p>
+            </div>
+
+            <div className="faq-item mb-4">
+              <h3 className="h4 mb-2">
+                <i className="fa fa-question-circle text-primary mr-2"></i>
+                What services do you offer as a full-stack developer?
+              </h3>
+              <p className="lead">
+                I provide complete full-stack development services including backend development with Laravel, frontend development with React, API development, system integration, DevOps, and infrastructure management. I specialize in building software products for startups and scaling existing applications.
+              </p>
+            </div>
+
+            <div className="faq-item mb-4">
+              <h3 className="h4 mb-2">
+                <i className="fa fa-question-circle text-primary mr-2"></i>
+                Do you work with startups?
+              </h3>
+              <p className="lead">
+                Yes, I specialize in working with startups and SaaS companies. I have extensive experience building MVPs, scaling applications, and helping shape the technical direction of early-stage companies. My experience includes working with software startups, SaaS startups, and businesses needing CRM systems.
+              </p>
+            </div>
+
+            <div className="faq-item mb-4">
+              <h3 className="h4 mb-2">
+                <i className="fa fa-question-circle text-primary mr-2"></i>
+                What technologies do you use?
+              </h3>
+              <p className="lead">
+                I primarily work with <strong>Laravel</strong> (PHP) for backend development and <strong>React</strong> for frontend development. I also have experience with WordPress, AWS, Docker, Linux server management, and various database systems. I'm a strong advocate of choosing the right technology for each project rather than defaulting to what I know best - I'll recommend and work with whatever stack makes the most sense for your specific needs and constraints.
+              </p>
+            </div>
+
+            <div className="faq-item mb-4">
+              <h3 className="h4 mb-2">
+                <i className="fa fa-question-circle text-primary mr-2"></i>
+                How long have you been developing software?
+              </h3>
+              <p className="lead">
+                I have over 20 years of experience in software development. I've worked on projects ranging from small business websites to large-scale applications, including ecommerce platforms, SaaS products, CRM systems, business information, and management systems.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <a href="#contact" className="btn btn-primary btn-lg">
+              <i className="fa fa-envelope mr-2"></i>Get in Touch
+            </a>
           </div>
         </div>
       </section>
@@ -592,6 +760,7 @@ const IndexPage = () => (
 
     </div>
   </Layout>
-);
+  );
+};
 
 export default IndexPage;

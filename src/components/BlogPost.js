@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from './Layout';
 import Sidebar from './Sidebar';
+import config from '../../config';
 
 const BlogPost = ({ title, date, description, children, slug }) => {
   const formattedDate = new Date(date).toLocaleDateString('en-GB', {
@@ -10,10 +11,44 @@ const BlogPost = ({ title, date, description, children, slug }) => {
     day: 'numeric'
   });
 
+  const siteUrl = 'https://www.interokedigital.co.uk';
+  const postUrl = `${siteUrl}/blog/${slug}`;
+  const publishedDate = new Date(date).toISOString();
+
+  // Article schema for SEO
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description: description,
+    image: `${siteUrl}/og-image.jpg`,
+    datePublished: publishedDate,
+    dateModified: publishedDate,
+    author: {
+      '@type': 'Person',
+      name: `${config.firstName} ${config.lastName}`,
+      url: siteUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Interoke Digital',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/icon.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+  };
+
   return (
     <Layout
       title={`${title} - Interoke Digital Blog`}
       description={description}
+      canonical={postUrl}
     >
       <Sidebar />
       <div className="container-fluid p-0">
@@ -25,14 +60,17 @@ const BlogPost = ({ title, date, description, children, slug }) => {
               </Link>
             </div>
             
-            <article>
-              <h1 className="mb-3">{title}</h1>
+            <article itemScope itemType="https://schema.org/Article">
+              <script type="application/ld+json">
+                {JSON.stringify(articleSchema)}
+              </script>
+              <h1 className="mb-3" itemProp="headline">{title}</h1>
               <div className="text-muted mb-4">
                 <i className="fa fa-calendar mr-2"></i>
-                {formattedDate}
+                <time dateTime={publishedDate} itemProp="datePublished">{formattedDate}</time>
               </div>
               
-              <div className="blog-content">
+              <div className="blog-content" itemProp="articleBody">
                 {children}
               </div>
               

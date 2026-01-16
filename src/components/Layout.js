@@ -8,10 +8,11 @@ import config from '../../config';
 
 class Layout extends Component {
   render() {
-    const { children, description, image, title } = this.props;
+    const { children, description, image, title, canonical, additionalStructuredData } = this.props;
     const siteTitle = title || config.siteTitle;
     const siteDescription = description || 'Ben Lumley - Full-stack developer in Bath, Bristol, and Wiltshire. Specialising in Laravel, backend development, and scaling solutions. Building software products for businesses of all sizes. Web developer and software developer services.';
     const siteUrl = 'https://www.interokedigital.co.uk';
+    const canonicalUrl = canonical || siteUrl;
     const siteImage = image || `${siteUrl}/og-image.jpg`;
 
     // Structured data for local business
@@ -56,6 +57,9 @@ class Layout extends Component {
           <>
             <Helmet
               title={siteTitle}
+              link={[
+                { rel: 'canonical', href: canonicalUrl }
+              ]}
               meta={[
                 { name: 'description', content: siteDescription },
                 { name: 'keywords', content: 'Ben Lumley, freelance developer, full-stack developer, laravel developer, startup developer, bath developer, bristol developer, wiltshire developer, php developer, backend developer, software developer, web developer' },
@@ -67,7 +71,7 @@ class Layout extends Component {
                 { property: 'og:type', content: 'website' },
                 { property: 'og:title', content: siteTitle },
                 { property: 'og:description', content: siteDescription },
-                { property: 'og:url', content: siteUrl },
+                { property: 'og:url', content: canonicalUrl },
                 { property: 'og:image', content: siteImage },
                 { property: 'og:locale', content: 'en_GB' },
                 { property: 'og:site_name', content: 'Interoke Digital' },
@@ -83,6 +87,11 @@ class Layout extends Component {
               <script type="application/ld+json">
                 {JSON.stringify(structuredData)}
               </script>
+              {additionalStructuredData && additionalStructuredData.map((data, index) => (
+                <script key={index} type="application/ld+json">
+                  {JSON.stringify(data)}
+                </script>
+              ))}
               {config.googleAnalyticsId && (
                 <>
                   <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsId}`}></script>

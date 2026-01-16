@@ -22,7 +22,11 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
+    // Image optimization plugins - install with: npm install --save gatsby-plugin-sharp@^2.13.0 gatsby-transformer-sharp@^2.12.0
+    // Note: These require proper Node.js and build environment. If installation fails, you may need to update Node.js version.
+    // 'gatsby-plugin-sharp',
+    // 'gatsby-transformer-sharp',
 
 ],
 };
