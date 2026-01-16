@@ -298,22 +298,22 @@ const IndexPage = () => (
 
               <p>
                 IdencyTime is a multi-tenant time and attendance management system built with Laravel and Filament. 
-                The system manages staff clock in/out records from biometric devices (Anviz and UniUbi), handles complex 
-                timezone management across multiple locations, and integrates with HR systems including PeopleHR, SageHR, 
+                The system manages staff clock in/out records from biometric devices and integrates with HR systems including PeopleHR, SageHR, 
                 and CezanneHR.
               </p>
 
+              <p>As the development lead on the project, I'm responsible for the overall architecture, development, and maintenance of the system, and I'm also involved in decision-making and planning on the product's direction.</p>
+
               <p>
-                Key features include real-time device synchronization, automated clock registration 
+                Key features include multiple devices/device vendors, real-time device synchronization, automated clock registration 
                 and staff matching, multi-timezone support, evacuation 
                 reporting for safety compliance, and comprehensive admin panel built with Filament for managing customers, 
                 staff, devices, locations, and departments.
               </p>
 
               <p>
-                The system is built with Laravel, uses Filament for the admin interface, uses Laravel Horizon queues, and includes robust testing coverage with PHPUnit and PHPStan level 8 
-                static analysis. The architecture supports multiple device vendors with different synchronization patterns and 
-                includes sophisticated timezone handling to ensure accurate time tracking for tenants with globally spread teams.
+                The system is built with Laravel, uses Filament for the admin interface, uses Laravel Horizon queues, and has high levels of test coverage with PHPUnit and meets PHPStan level 8
+                static analysis.
               </p>
 
             </div>
