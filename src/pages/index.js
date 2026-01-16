@@ -172,10 +172,18 @@ const IndexPage = () => {
       },
       {
         '@type': 'Question',
+        name: 'What does Full-Stack Developer mean?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A full-stack developer handles both the frontend (what users see and interact with) and backend (server, database, APIs) of web applications. This means I can build complete software solutions from start to finish - from designing databases and APIs to creating user interfaces and managing server infrastructure. This makes me particularly valuable for startups and small teams who need someone who can work across the entire technical stack.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'How long have you been developing software?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I have over 20 years of experience in software development. I\'ve worked on projects ranging from small business websites to large-scale applications handling millions of users, including ecommerce platforms, SaaS products, and mission-critical tracking systems.',
+          text: 'I have over 20 years of experience in software development. I\'ve worked on projects ranging from small business websites to large-scale applications, including ecommerce platforms, SaaS products, CRM systems, business information systems, and management systems.',
         },
       },
     ],
@@ -296,10 +304,20 @@ const IndexPage = () => {
             <div className="faq-item mb-4">
               <h3 className="h4 mb-2">
                 <i className="fa fa-question-circle text-primary mr-2"></i>
+                What does Full-Stack Developer mean?
+              </h3>
+              <p className="lead">
+                A full-stack developer handles both the <strong>frontend</strong> (what users see and interact with) and <strong>backend</strong> (server, database, APIs) of web applications. This means I can build complete software solutions from start to finish - from designing databases and APIs to creating user interfaces and managing server infrastructure. This makes me particularly valuable for startups and small teams who need someone who can work across everything technical.
+              </p>
+            </div>
+
+            <div className="faq-item mb-4">
+              <h3 className="h4 mb-2">
+                <i className="fa fa-question-circle text-primary mr-2"></i>
                 How long have you been developing software?
               </h3>
               <p className="lead">
-                I have over 20 years of experience in software development. I've worked on projects ranging from small business websites to large-scale applications, including ecommerce platforms, SaaS products, CRM systems, business information, and management systems.
+                I have over 20 years of experience in software development. I've worked on projects ranging from small business websites to large-scale applications, including ecommerce platforms, SaaS products, CRM systems, business information systems, and management systems.
               </p>
             </div>
           </div>
@@ -646,7 +664,7 @@ const IndexPage = () => {
 
                 <div className="resume-heading">
                   <h3 className="mb-0">Various Digital Agencies</h3>
-                  <div className="subheading mb-3">Freelance Developer</div>
+                  <div className="subheading mb-3">Lead Developer / Freelance Developer</div>
                 </div>
 
               </div>
