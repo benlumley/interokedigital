@@ -42,23 +42,7 @@ const FullStackStartupPost = () => (
     </ul>
 
     <p>
-      I've built complete MVPs in 3-4 weeks that would have taken 2-3 months with a specialized team, simply 
-      because there's no coordination overhead.
-    </p>
-
-    <h2>Cost Efficiency</h2>
-    <p>
-      For a startup, hiring one full-stack developer is much more cost-effective than a team:
-    </p>
-    <ul>
-      <li>One salary instead of three or four</li>
-      <li>One set of tools/licenses instead of multiple</li>
-      <li>Simpler infrastructure (one person can manage it)</li>
-      <li>No team management overhead</li>
-    </ul>
-
-    <p>
-      This is especially important when you're bootstrapped or have limited funding.
+      Small MVPs can frequently be built much more quickly by a single developer as a result.
     </p>
 
     <h2>The Full-Stack Advantage</h2>
@@ -75,7 +59,7 @@ const FullStackStartupPost = () => (
     <h3>Frontend Capability</h3>
     <p>
       While I'm not a designer, I can build functional, responsive frontends. I work with designers 
-      when needed, but can build MVPs without one initially.
+      when needed, but can often build MVPs without one initially.
     </p>
 
     <h3>Infrastructure Knowledge</h3>
@@ -86,12 +70,12 @@ const FullStackStartupPost = () => (
 
     <h2>When to Specialize</h2>
     <p>
-      As your startup grows, you'll eventually need specialists:
+      As your startup grows, you might eventually choose to bring in specialists:
     </p>
     <ul>
-      <li><strong>When you have dedicated frontend needs:</strong> Complex SPAs, mobile apps, design-heavy work</li>
-      <li><strong>When infrastructure becomes complex:</strong> Kubernetes, microservices, high-scale systems</li>
-      <li><strong>When you have the budget:</strong> Multiple developers allow specialization</li>
+      <li><strong>To speed up progress:</strong> It can be helpful to allow individuals to focus on frontend or backend, or certain priority features</li>
+      <li><strong>When the project becomes too large:</strong> The project may simply be too big for one person to continue to support</li>
+      <li><strong>For business continuity:</strong> Once budget allows, having multiple people familiar with the codebase reduces risk</li>
     </ul>
 
     <p>
@@ -104,30 +88,12 @@ const FullStackStartupPost = () => (
     </p>
     <ol>
       <li><strong>Early stage:</strong> I handle everything - backend, frontend, infrastructure</li>
-      <li><strong>Growth stage:</strong> I focus on backend (my strength), hand off frontend to a specialist</li>
-      <li><strong>Scale stage:</strong> I maintain core backend, hand off DevOps to a dedicated engineer</li>
+      <li><strong>Growth stage:</strong> I focus on backend (my strength), hand off frontend and other peripheral areas</li>
+      <li><strong>Scale stage:</strong> I maintain core backend, manage a growing team of developers and slowly hand off resonsibilities to others.</li>
     </ol>
 
     <p>
-      This allows the startup to grow their team gradually while maintaining continuity on the backend systems.
-    </p>
-
-    <h2>Real Example</h2>
-    <p>
-      I worked with a startup building a SaaS product. In the first 6 months, I:
-    </p>
-    <ul>
-      <li>Built the Laravel backend API</li>
-      <li>Created the initial frontend (React)</li>
-      <li>Set up AWS infrastructure</li>
-      <li>Configured CI/CD pipelines</li>
-      <li>Managed the database and backups</li>
-    </ul>
-
-    <p>
-      They launched, got customers, and raised funding. Then we hired a dedicated frontend developer, 
-      and I focused entirely on backend scaling and new features. The transition was smooth because 
-      the foundation was solid.
+      This allows the startup to grow their team gradually while maintaining continuity.
     </p>
 
     <h2>What to Look For</h2>
@@ -150,8 +116,8 @@ const FullStackStartupPost = () => (
     </p>
 
     <p>
-      If you're a startup founder in Bath, Bristol, or Wiltshire looking for full-stack development help, 
-      <a href="/#contact">let's talk</a>. I help startups build their technical foundation, from MVP to scale.
+      If you're a startup founder in Bath, Bristol, or Wiltshire looking for full-stack development 
+      help, <a href="/#contact">let's talk</a>. I help startups build their technical foundation, from MVP to scale.
     </p>
   </BlogPost>
 );

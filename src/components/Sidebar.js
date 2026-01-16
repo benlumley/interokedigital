@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
 import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
 
@@ -10,11 +11,12 @@ export class Sidebar extends Component {
     super(props);
     this.state = {
       tabs: [
-        { content: 'About', href: 'about' },
-        { content: 'Skills', href: 'skills' },
-        { content: 'Projects', href: 'experience' },
-        { content: 'Education', href: 'education' },
-        { content: 'Contact', href: 'contact' },
+        { content: 'About', href: 'about', isAnchor: true },
+        { content: 'Skills', href: 'skills', isAnchor: true },
+        { content: 'Projects', href: 'experience', isAnchor: true },
+        { content: 'Education', href: 'education', isAnchor: true },
+        { content: 'Contact', href: 'contact', isAnchor: true },
+        { content: 'Blog', href: '/blog', isAnchor: false },
       ],
       collapsed: true
     };
@@ -34,13 +36,17 @@ export class Sidebar extends Component {
     const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
     const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
     const { tabs } = this.state;
+    
+    // Check if we're on a blog page (client-side only)
+    const isBlogPage = typeof window !== 'undefined' && window.location.pathname.startsWith('/blog');
+    const anchorTabs = tabs.filter(tab => tab.isAnchor);
+    
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark  fixed-top"
         id="sideNav"
       >
-        <a className="navbar-brand" href="#page-top">
-
+        <Link className="navbar-brand" to="/#page-top">
           <span className="d-block mb-lg-4 id-logo">
             <img
                 className="img-fluid mx-auto "
@@ -55,7 +61,7 @@ export class Sidebar extends Component {
               alt="Ben Lumley"
             />
           </span>
-        </a>
+        </Link>
         <button
           className={`${classTwo}`}
           type="button"
@@ -70,20 +76,47 @@ export class Sidebar extends Component {
         </button>
         <div className={`${classOne}`} id="navbarSupportedContent">
           <Scrollspy
-            items={tabs.map(s => s.href)}
+            items={anchorTabs.map(s => s.href)}
             currentClassName="active"
             offset={-300}
             className="navbar-nav"
           >
             {tabs.map((tab, i) => {
-              const { href, content } = tab;
+              const { href, content, isAnchor } = tab;
+              
+              // For anchor links on blog pages, use full URL
+              if (isAnchor && isBlogPage) {
+                return (
+                  <li className="nav-item" key={href}>
+                    <Link className="nav-link" to={`/#${href}`}>
+                      {content}
+                    </Link>
+                  </li>
+                );
+              }
+              
+              // For anchor links on homepage, use scroll
+              if (isAnchor) {
+                return (
+                  <li className="nav-item" key={href}>
+                    <Scroll type="id" element={href}>
+                      <a className="nav-link" href={`#${href}`}>
+                        {content}
+                      </a>
+                    </Scroll>
+                  </li>
+                );
+              }
+              
+              // For non-anchor links (like Blog)
               return (
                 <li className="nav-item" key={href}>
-                  <Scroll type="id" element={href}>
-                    <a className="nav-link" href={`#${href}`}>
-                      {content}
-                    </a>
-                  </Scroll>
+                  <Link 
+                    className={`nav-link ${isBlogPage && href === '/blog' ? 'active' : ''}`}
+                    to={href}
+                  >
+                    {content}
+                  </Link>
                 </li>
               );
             })}
