@@ -1,0 +1,145 @@
+// Global styling for this template
+
+body {
+  @include body-font;
+  padding-top: 54px;
+  color: $gray-600;
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: 80vw;
+  background-position-y: calc(100vh - 20vw);
+  background-size: 20vw 20vw;
+
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: $sidebar-base-width;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $gray-800;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  @include heading-font;
+  font-size: 1.5rem;
+}
+
+.social-icons {
+  a {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: $gray-700;
+    color: $white !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+.dev-icons {
+  font-size: 3rem;
+  .list-inline-item i {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Blog styling
+.blog-content {
+  line-height: 1.8;
+  
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+  
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  pre {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  code {
+    font-family: 'Courier New', monospace;
+  }
+  
+  p {
+    margin-bottom: 1.25rem;
+  }
+  
+  a {
+    color: $primary;
+    text-decoration: underline;
+    
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+}
+
+.blog-posts {
+  article {
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+}
