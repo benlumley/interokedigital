@@ -1,5 +1,5 @@
 ---
-title: Building a Minimal MVP: What You Actually Need vs. What You Think You Need
+title: "Building a Minimal MVP: What You Actually Need vs. What You Think You Need"
 description: Practical advice on building a minimal viable product for startups, focusing on what features are truly essential and what can wait.
 date: 2025-11-15
 slug: building-minimal-mvp

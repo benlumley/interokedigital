@@ -7,7 +7,7 @@
     $path = $page->getPath();
     $canonicalUrl = $page->canonical ?? rtrim($baseUrl, '/') . ($path === '/' ? '/' : $path);
     $siteImage = $page->image ?? rtrim($page->siteUrl, '/') . '/og-image.jpg';
-    $location = $page->location ?? [];
+    $location = is_array($page->location ?? []) ? ($page->location ?? []) : (array)($page->location ?? []);
 
     $structuredData = [
         '@context' => 'https://schema.org',
@@ -31,7 +31,7 @@
         'url' => $page->siteUrl,
         'sameAs' => array_map(function ($link) {
             return $link['url'];
-        }, $page->socialLinks),
+        }, is_array($page->socialLinks) ? $page->socialLinks : iterator_to_array($page->socialLinks)),
         'knowsAbout' => [
             'Laravel',
             'PHP',

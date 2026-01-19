@@ -10,8 +10,13 @@
         }
     },
     "scripts": {
-        "build": "vendor/bin/jigsaw build",
-        "build:production": "vendor/bin/jigsaw build production",
-        "serve": "vendor/bin/jigsaw serve"
+        "build": "./jigsaw-php vendor/bin/jigsaw build",
+        "build:production": "./jigsaw-php vendor/bin/jigsaw build production",
+        "serve": "./jigsaw-php vendor/bin/jigsaw serve --port=8001"
+    },
+    "config": {
+        "platform": {
+            "php": "8.4.17"
+        }
     }
 }

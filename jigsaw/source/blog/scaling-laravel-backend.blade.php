@@ -1,5 +1,5 @@
 ---
-title: Scaling Your Laravel Backend: Lessons from Growing Startup Applications
+title: "Scaling Your Laravel Backend: Lessons from Growing Startup Applications"
 description: Practical strategies for scaling Laravel applications as your startup grows, covering database optimization, caching, and infrastructure decisions.
 date: 2025-09-08
 slug: scaling-laravel-backend

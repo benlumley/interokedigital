@@ -1,5 +1,5 @@
 ---
-title: API Design for Startups: Building Backends That Don't Break Frontends
+title: "API Design for Startups: Building Backends That Don't Break Frontends"
 description: Best practices for designing RESTful APIs in Laravel that are maintainable, scalable, and developer-friendly for startup applications.
 date: 2025-07-03
 slug: api-design-startups

@@ -1,5 +1,5 @@
 ---
-title: Database Design for Startups: Getting the Foundation Right
+title: "Database Design for Startups: Getting the Foundation Right"
 description: Essential database design principles for startup applications, covering normalization, indexing, and when to denormalize for performance.
 date: 2025-04-12
 slug: database-design-startups
