@@ -1,6 +1,6 @@
 ---
-title: Interoke Digital
-description: With over 20 years of experience, I handle everything technical - from servers and infrastructure to backend development, frontend implementation, and scaling as your business grows.
+title: Interoke Digital | Full-Stack Developer | Bath, Bristol, Wiltshire
+description: Ben Lumley - Full-stack developer in Bath, Bristol, and Wiltshire. Specialising in Laravel, backend development, and scaling solutions. Building software products for businesses of all sizes. Web developer and software developer services.
 canonical: https://www.interokedigital.co.uk/
 ---
 @extends('_layouts.master')

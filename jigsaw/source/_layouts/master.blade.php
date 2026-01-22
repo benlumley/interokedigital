@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 @php
-    $siteTitle = $page->title ?? $page->siteTitle;
-    $siteDescription = $page->description ?? $page->siteDescription;
+    $siteTitle = $page->title;
+    $siteDescription = $page->description;
     $baseUrl = $page->baseUrl ?: $page->siteUrl;
     $path = $page->getPath();
     $canonicalUrl = $page->canonical ?? rtrim($baseUrl, '/') . ($path === '/' ? '/' : $path);
