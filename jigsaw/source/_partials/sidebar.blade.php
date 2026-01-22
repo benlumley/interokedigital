@@ -1,6 +1,7 @@
 @php
     $tabs = [
         ['content' => 'About', 'href' => 'about', 'isAnchor' => true],
+        ['content' => 'FAQ', 'href' => 'faq', 'isAnchor' => true],
         ['content' => 'Skills', 'href' => 'skills', 'isAnchor' => true],
         ['content' => 'Projects', 'href' => 'experience', 'isAnchor' => true],
         ['content' => 'Education', 'href' => 'education', 'isAnchor' => true],

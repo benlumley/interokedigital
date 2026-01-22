@@ -8,9 +8,9 @@
     "development": "pnpm exec mix",
     "watch": "pnpm exec mix watch",
     "hot": "pnpm exec mix watch --hot",
-    "production": "pnpm exec mix --production && ./jigsaw-php vendor/bin/jigsaw build production",
+    "production": "pnpm exec mix --production && php vendor/bin/jigsaw build production",
     "build": "pnpm run production",
-    "serve": "./jigsaw-php vendor/bin/jigsaw serve --port=8001"
+    "serve": "php vendor/bin/jigsaw serve --port=8001"
   },
   "packageManager": "pnpm@8.15.0",
   "devDependencies": {
